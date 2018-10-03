@@ -8,7 +8,8 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Linking
+  Linking,
+  TouchableHighlight
 } from 'react-native';
 
 export default class SettingsScreen extends React.Component {
@@ -22,34 +23,31 @@ export default class SettingsScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-
           <View style={styles.getStartedContainer}>
             <Text style={styles.getStartedText}> Feel free to contact on any of these below </Text>
           </View>
 
+          <TouchableHighlight style={styles.buttonGmail} onPress={()=> Linking.openURL('http://www.google.com/muneebkt')} underlayColor="#999">
+                <Text style={styles.buttonText}>Gmail</Text>
+          </TouchableHighlight>
+
+          <TouchableHighlight style={styles.buttonLinkedIn} onPress={()=> Linking.openURL('https://www.linkedin.com/in/muneeb-mukhtar-488402b4/')} underlayColor="#999">
+                <Text style={styles.buttonText}>LinkedIn</Text>
+          </TouchableHighlight>
+
+          <TouchableHighlight style={styles.buttonFb} onPress={()=> Linking.openURL('https://www.facebook.com/mindblowgger')} underlayColor="#999">
+                <Text style={styles.buttonText}>Facebook</Text>
+          </TouchableHighlight>
+
+          <TouchableHighlight style={styles.buttonTwitter} onPress={()=> Linking.openURL('https://www.twitter.com/muneebkt')} underlayColor="#999">
+                <Text style={styles.buttonText}>Twitter</Text>
+          </TouchableHighlight>
+
+          <TouchableHighlight style={styles.buttonInsta} onPress={()=> Linking.openURL('https://www.instagram.com/crazyrubixfan')} underlayColor="#999">
+                <Text style={styles.buttonText}>Instagram</Text>
+          </TouchableHighlight>
+
           <View style={styles.welcomeContainer}>
-            <Text style={{color: 'blue',lineHeight: 24}}>
-              Gmail : muneebkt@gmail.com
-            </Text>
-            <Text style={{color: 'brown',lineHeight: 24}}
-              onPress={() => Linking.openURL('https://www.linkedin.com/in/muneeb-mukhtar-488402b4/')}>
-              LinkedIn
-            </Text>
-            <Text style={{color: 'red',lineHeight: 24}}
-              onPress={() => Linking.openURL('http://www.facebook.com/muneebkt')}>
-              Facebook
-            </Text>
-            <Text style={{color: 'yellow',lineHeight: 24}}
-              onPress={() => Linking.openURL('https://www.twitter.com/muneebkt')}>
-              Twitter
-            </Text>
-            <Text style={{color: 'green',lineHeight: 24}}>
-              Skype : muneebkt1
-            </Text>
-            <Text style={{color: 'magenta',lineHeight: 24}}
-              onPress={() => Linking.openURL('https://www.instagram.com/crazyrubixfan')}>
-              Instagram
-            </Text>
           </View>
         </ScrollView>
       </View>
@@ -90,4 +88,46 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     textAlign: 'center',
   },
+  button: {
+    backgroundColor: '#cccccc',
+    marginBottom: 15,
+    padding: 15,
+    borderRadius: 5
+  },
+  buttonGmail: {
+    backgroundColor: '#3cba54',
+    marginBottom: 15,
+    padding: 15,
+    borderRadius: 5
+  },
+  buttonLinkedIn: {
+    backgroundColor: '#0077B5',
+    marginBottom: 15,
+    padding: 15,
+    borderRadius: 5
+  },
+  buttonFb: {
+    backgroundColor: '#a2bc7e',
+    marginBottom: 15,
+    padding: 15,
+    borderRadius: 5
+  },
+  buttonTwitter: {
+    backgroundColor: '#62A9E0',
+    marginBottom: 15,
+    padding: 15,
+    borderRadius: 5
+  },
+  buttonInsta: {
+    backgroundColor: '#bc7e9f',
+    marginBottom: 15,
+    padding: 15,
+    borderRadius: 5
+  },
+  buttonText: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+    color: '#666666',
+    fontSize: 18
+  }
 });
