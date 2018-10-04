@@ -20,7 +20,7 @@ HomeStack.navigationOptions = {
       name={
         Platform.OS === 'ios'
           ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
+          : 'md-home'
       }
     />
   ),
@@ -35,7 +35,7 @@ WorksStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
+      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-home'}
     />
   ),
 };
@@ -63,7 +63,7 @@ ContactmeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'contact-mail'}
+      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-mail'}
     />
   ),
 };
