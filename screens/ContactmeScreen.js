@@ -60,6 +60,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  contentContainer: {
+    paddingVertical: 20
+  },
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
@@ -75,24 +78,11 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 20,
   },
-  welcomeImage: {
-    width: 100,
-    height: 80,
-    resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
-  },
   getStartedText: {
     fontSize: 17,
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
     textAlign: 'center',
-  },
-  button: {
-    backgroundColor: '#cccccc',
-    marginBottom: 15,
-    padding: 15,
-    borderRadius: 5
   },
   buttonGmail: {
     backgroundColor: '#3cba54',

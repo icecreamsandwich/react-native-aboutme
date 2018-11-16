@@ -44,6 +44,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  contentContainer: {
+    paddingVertical: 20
+  },
   welcomeContainer: {
     alignItems: 'center',
     marginTop: 10,
